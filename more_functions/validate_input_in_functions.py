@@ -22,7 +22,7 @@ def score_input(test_name, test_score=0,
     then prints valid input as 'Test name: ##'
 
     """
-    # return {test_name: test_score}
+    return {test_name: test_score}
     pass
 
 
