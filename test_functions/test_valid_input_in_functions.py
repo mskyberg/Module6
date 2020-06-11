@@ -13,7 +13,7 @@ from more_functions import validate_input_in_functions as validate
 
 class MyTestCase(unittest.TestCase):
     def test_score_input_test_name(self):
-        self.assertEqual(validate.score_input('1stTest'), {'First Test': 0})
+        self.assertEqual(validate.score_input('1stTest'), {'1stTest': 0})
 
     def test_score_input_test_score_valid(self):
         self.assertEqual(validate.score_input('2ndTest', 90), {'2ndTest': 90})
