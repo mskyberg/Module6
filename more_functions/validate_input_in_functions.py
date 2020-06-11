@@ -22,8 +22,10 @@ def score_input(test_name, test_score=0,
     then prints valid input as 'Test name: ##'
 
     """
-    return {test_name: test_score}
-    pass
+    if test_score < 0 or test_score > 100:
+        return invalid_message
+    else:
+        return {test_name: test_score}
 
 
 if __name__ == '__main__':
