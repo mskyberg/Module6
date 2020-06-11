@@ -22,11 +22,19 @@ def score_input(test_name, test_score=0,
     then prints valid input as 'Test name: ##'
 
     """
-    if test_score < 0 or test_score > 100:
+    try:
+        if test_score < 0 or test_score > 100:
+            return invalid_message
+    except TypeError as err:
+        print(f'Type error: {err}')
         return invalid_message
     else:
         return {test_name: test_score}
 
 
 if __name__ == '__main__':
-    pass
+    try:
+        print(score_input('MainTest1', 90))
+        print(score_input('MainTest2', 'CAT', 'Well, Shoot'))
+    except TypeError:
+        'Error in input'
