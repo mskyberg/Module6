@@ -20,7 +20,10 @@ def measurements(m_list):
         :param a_list: list of length and width values
         :returns: calculated perimeter float
         """
-        return a_list[0] * a_list[1]
+        if len(a_list) == 2:
+            return a_list[0] * a_list[1]
+        else:
+            return a_list[0] * a_list[0]
 
     def perimeter(p_list):
         """
@@ -28,11 +31,14 @@ def measurements(m_list):
         :param p_list: list of length and width values
         :returns: calculated perimeter float
         """
-        return 2 * (p_list[0] + p_list[1])
+        if len(p_list) == 2:
+            return 2 * (p_list[0] + p_list[1])
+        else:
+            return 4 * (p_list[0])
 
-    # "Perimeter = 11.0 Area = 7.14"
-    return f"Perimeter = {perimeter(m_list)} Area = {area(m_list)}"
+    return f'Perimeter = {perimeter(m_list)} Area = {area(m_list)}'
 
 
 if __name__ == '__main__':
-    pass
+    print(measurements([20.1, 30.4]))
+    print(measurements([108.89]))
